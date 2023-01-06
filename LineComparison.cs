@@ -8,8 +8,9 @@ namespace LineComparisonNew
 {
     internal class LineComparison
     {
-       public void lenthOfLine()
+        public void equalityOfLine()
         {
+            Console.WriteLine("------- Enter the points of first line ------- ");
             Console.Write(" Enter the value of x1 : ");
             int x1 = Convert.ToInt32(Console.ReadLine());
             Console.Write(" Enter the value of  x2 : ");
@@ -19,9 +20,29 @@ namespace LineComparisonNew
             Console.Write(" Enter the value of y2 : ");
             int y2 = Convert.ToInt32(Console.ReadLine());
 
-            double length_Of_A_Line = ((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
-            Console.WriteLine(" The length of a line is (x2 - x1) ^ 2 + (y2 - y1) ^ 2  = " + length_Of_A_Line);
+            double length_Of_1stLine = ((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
+           
 
+            Console.WriteLine("------- Enter the points of second line ------- ");
+            Console.Write(" Enter the value of p1 : ");
+            int p1 = Convert.ToInt32(Console.ReadLine());
+            Console.Write(" Enter the value of p2 : ");
+            int p2 = Convert.ToInt32(Console.ReadLine());
+            Console.Write(" Enter the value of q1 : ");
+            int q1 = Convert.ToInt32(Console.ReadLine());
+            Console.Write(" Enter the value of q2 : ");
+            int q2 = Convert.ToInt32(Console.ReadLine());
+
+            double length_Of_2ndLine = Math.Sqrt(Math.Pow(p2 - p1, 2) + Math.Pow(q2 - q1, 2));
+
+            if (length_Of_1stLine == length_Of_2ndLine)
+            {
+                Console.WriteLine("\n Both lines in equal length");
+            }
+            else
+            {
+                Console.WriteLine("\n Both lines are not equal in length.");
+            }
         }
     }
 }
