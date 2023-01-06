@@ -5,7 +5,7 @@
         static void Main(string[] args)
         {
             LineComparison lineComparison = new LineComparison();
-            lineComparison.equalityOfLine();
+            lineComparison.comparingToMethods();
         }
     }
 }

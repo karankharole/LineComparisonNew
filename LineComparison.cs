@@ -8,7 +8,8 @@ namespace LineComparisonNew
 {
     internal class LineComparison
     {
-        public void equalityOfLine()
+
+        public void comparingToMethods()
         {
             Console.WriteLine("------- Enter the points of first line ------- ");
             Console.Write(" Enter the value of x1 : ");
@@ -21,7 +22,8 @@ namespace LineComparisonNew
             int y2 = Convert.ToInt32(Console.ReadLine());
 
             double length_Of_1stLine = ((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
-           
+            // Also use this predined Math.Sqrt method for solving equation
+            // double length_Of_A_Line = Math.Sqrt(Math.Pow(x2 - x1, 2) + Math.Pow(y2 - y1, 2));
 
             Console.WriteLine("------- Enter the points of second line ------- ");
             Console.Write(" Enter the value of p1 : ");
@@ -35,14 +37,20 @@ namespace LineComparisonNew
 
             double length_Of_2ndLine = Math.Sqrt(Math.Pow(p2 - p1, 2) + Math.Pow(q2 - q1, 2));
 
-            if (length_Of_1stLine == length_Of_2ndLine)
+            if (length_Of_1stLine.CompareTo (length_Of_2ndLine)>0)
             {
-                Console.WriteLine("\n Both lines in equal length");
+                Console.WriteLine("\nfirst line is greater");
+            }
+            if (length_Of_1stLine.CompareTo ( length_Of_2ndLine)<0)
+            {
+                Console.WriteLine("\n 1st second line graeter ");
             }
             else
             {
-                Console.WriteLine("\n Both lines are not equal in length.");
+                Console.WriteLine("\n both lines are equal ");
+
             }
         }
+
     }
 }
